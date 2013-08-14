@@ -13,5 +13,17 @@
     "q": "0.9.x",
     "aws-sdk": "1.5.x",
     "underscore": "1.5.x"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-simple-mocha": "*",
+    "grunt-contrib-watch": "*",
+    "should": "*",
+    "mocha": "1.12.x"
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }
