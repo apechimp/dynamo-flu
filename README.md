@@ -1,6 +1,9 @@
 dynamo-flu
 ==========
 
+[![Build Status](https://travis-ci.org/apechimp/dynamo-flu.png?branch=master)]
+(https://travis-ci.org/apechimp/dynamo-flu)
+
 A fluent wrapper around DynamoDB which allows you to write code like 
 
     db.from('Users').get.with('userId').equalTo(userId).
