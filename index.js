@@ -184,14 +184,16 @@ function putMethod(db, logStream, tableName, collectionBased, keyName,
 }
 
 
-function chooseToTable(db, logStream, tableName) {
+function chooseToTable(db, logStream, tablePrefix, tableName) {
+  tableName = (tablePrefix || '') + tableName;
   return {
     put: putMethod.bind(null, db, logStream, tableName, false),
     putAll: putMethod.bind(null, db, logStream, tableName, true),
   };
 }
 
-function chooseFromTable(db, logStream, tableName) {
+function chooseFromTable(db, logStream, tablePrefix, tableName) {
+  tableName = (tablePrefix || '') + tableName;
   return {
     get: {
       with: function(keyName) {
@@ -206,7 +208,7 @@ function chooseFromTable(db, logStream, tableName) {
   };
 }
 
-module.exports = function(config, logStream) {
+module.exports = function(config, logStream, tablePrefix) {
   var db;
 
   logStream = logStream || process.stdout;
@@ -216,8 +218,8 @@ module.exports = function(config, logStream) {
   db = new aws.DynamoDB();
 
   return {
-    from: chooseFromTable.bind(null, db, logStream),
-    to: chooseToTable.bind(null, db, logStream)
+    from: chooseFromTable.bind(null, db, logStream, tablePrefix),
+    to: chooseToTable.bind(null, db, logStream, tablePrefix)
   };
 
 };
