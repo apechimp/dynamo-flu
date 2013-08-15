@@ -1,4 +1,4 @@
-var promises = require('./promises'),
+var operations = require('./operations'),
     _ = require('underscore'),
     Q = require('q');
 
@@ -24,9 +24,9 @@ function createPromise() {
   var thisPromiseName = _.first(arguments),
       priorPromise = this.promise,
       priorPromiseName = this.name,
-      priorPromiseSpec = promises[priorPromiseName],
+      priorPromiseSpec = operations[priorPromiseName],
       args = _.rest(arguments),
-      thisPromiseSpec = promises[thisPromiseName],
+      thisPromiseSpec = operations[thisPromiseName],
       thisPromise = 
         priorPromise.then(promiseResolver.bind(null, 
               thisPromiseSpec.resolver));

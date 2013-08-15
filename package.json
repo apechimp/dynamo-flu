@@ -21,7 +21,8 @@
     "grunt-simple-mocha": "*",
     "grunt-contrib-watch": "*",
     "should": "*",
-    "mocha": "1.12.x"
+    "mocha": "1.12.x",
+    "require-directory": "*"
   },
   "scripts": {
     "test": "grunt test"

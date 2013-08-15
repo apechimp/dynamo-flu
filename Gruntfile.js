@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  var js_files = ['Gruntfile.js', 'src/*.js', 'index.js', 'test/*.js'];
+  var js_files = ['Gruntfile.js', 'src/*.js', 'index.js', 'test/**/*.js'];
 
   grunt.initConfig({
     jshint: {
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         reporter: 'nyan'
       },
       all: {
-        src: ['test/*.js']
+        src: ['test/**/*.js']
       }
     },
     watch: {

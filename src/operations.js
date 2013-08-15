@@ -123,12 +123,12 @@ module.exports = {
       });
       return deferred.promise;
     },
-    next: ['pick', 'defaultTo', 'ifEmpty']
+    next: ['pick', 'defaultTo', 'ifExists']
   },
 
-  ifEmpty: {
+  ifExists: {
     resolver: function(onEmpty, item) {
-      if(!item) { 
+      if(item === null || typeof item === 'undefined') { 
         onEmpty(); 
       }
       else {
