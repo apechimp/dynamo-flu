@@ -1,7 +1,7 @@
 var aws = require('aws-sdk'),
     _str = require('underscore.string'),
     _ = require('underscore'),
-    createPromise = require('./promiseCreator');
+    createPromise = require('./src/promiseCreator');
 
 function logItemResult(logStream, verb, input) {
   var startTime = process.hrtime();
