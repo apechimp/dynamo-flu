@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     jshint: {
-      jshintrc: '.jshintrc',
+      options: { jshintrc: '.jshintrc' },
       all: js_files
     },
     simplemocha: {
