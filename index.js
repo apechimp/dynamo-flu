@@ -1,6 +1,6 @@
 var aws = require('aws-sdk'),
     _str = require('underscore.string'),
-    _ = require('underscore'),
+    _ = require('lodash'),
     createPromise = require('./src/promiseCreator');
 
 function logItemResult(logStream, verb, input) {

@@ -1,5 +1,5 @@
 var operations = require('./operations'),
-    _ = require('underscore'),
+    _ = require('lodash'),
     Q = require('q');
 
 function addNextPromises(nextPromiseNames, promise, promiseName) {
