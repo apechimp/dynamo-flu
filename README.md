@@ -1,6 +1,8 @@
 dynamo-flu
 ==========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/apechimp/dynamo-flu.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/apechimp/dynamo-flu.png?branch=master)]
 (https://travis-ci.org/apechimp/dynamo-flu)
 
