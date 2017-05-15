@@ -10,10 +10,10 @@
   "author": "apechimp",
   "license": "MIT",
   "dependencies": {
-    "q": "0.9.x",
-    "aws-sdk": "1.5.x",
-    "underscore.string": "2.3.3",
-    "lodash": "~2.2.1"
+    "q": "~1.5.0",
+    "aws-sdk": "~2.51.0",
+    "underscore.string": "3.3.4",
+    "lodash": "~4.17.4"
   },
   "devDependencies": {
     "grunt": "*",
@@ -22,7 +22,7 @@
     "grunt-simple-mocha": "*",
     "grunt-contrib-watch": "*",
     "should": "*",
-    "mocha": "1.12.x",
+    "mocha": "~3.4.1",
     "require-directory": "*"
   },
   "scripts": {
